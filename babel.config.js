@@ -6,5 +6,6 @@ module.exports = {
         targets: '> 0.25%, not dead',
       },
     ],
+    '@babel/preset-react'
   ],
 }
