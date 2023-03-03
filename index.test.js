@@ -25,14 +25,27 @@ describe('Editable title', () => {
       })
   })
 
-  it('has a focusable element', async () => {
-    const button = getByRole(container, 'button')
-    await button.focus()
-    expect(button).toHaveFocus()
-
+  it('has an accessibly-interactive element', async () => {
     await user.tab()
 
-    const editHandle = getByTestId(container, 'edit-handle')
+    const editableTitle = getByTestId(container, 'editable-title')
+    // .toHaveRole('button') would be nice here
+    const editHandle = editableTitle.getByRole('button')
     expect(editHandle).toHaveFocus()
+  })
+  it('starts editing with Enter key', async () => {
+    const editHandle = getByTestId(container, 'editable-handle')
+    editHandle.focus()
+    const editableTitle = getByTestId(container, 'editable-title-link')
+    await user.keyboard('Enter')
+
+    expect(editableTitle).toHaveAttribute('contenteditable')
+    expect(editableTitle).toHaveFocus()
+  })
+  it('stops editing with the Escape key', async () => {
+
+  })
+  it('applies a selection with the Enter key after editing', async () => {
+
   })
 })
