@@ -8,27 +8,27 @@ main {
   padding: 1em;
 }
 h1, h2, h3, h4, h5, h6 {
-    line-height: 1.2;
-    margin: 0 0 10px;
-    font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 10px;
+  font-weight: 400;
 }
 .ItemTitle_title {
-    font-family: var(--cp-font-family);
-    font-size: 1.3rem;
-    margin: 0 0 0.1rem;
-    display: flex;
-    align-items: center;
-    line-height: 1.1;
+  font-family: var(--cp-font-family);
+  font-size: 1.3rem;
+  margin: 0 0 0.1rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.1;
 }
 .ItemTitle_titleLink {
-    color: var(--cp-color-1);
-    font-weight: 700;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 100%;
-    display: inline-block;
-    vertical-align: middle;
+  color: var(--cp-color-1);
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;
 }
 .ItemTitle_titleLink[contenteditable="true"] {
   outline: 1px solid black;
