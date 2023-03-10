@@ -3,11 +3,11 @@ import {render, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 
-import EditableTitle from './editable-title'
+import EditableTitle from './EditableTitle'
 
 const user = userEvent.setup()
 
-xdescribe('EditableTitle-React', () => {
+describe('EditableTitle-React', () => {
     it('renders', () => {
         render(<EditableTitle />)
         const example = screen.getByTestId('edit-handle')
