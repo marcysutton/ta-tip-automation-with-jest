@@ -2,8 +2,17 @@
   "name": "automated-testing-editable-title",
   "version": "1.0.0",
   "description": "A tip example for automated accessibility testing",
-  "main": "index.js",
+  "targets": {
+    "vanilla": {
+      "source": "index.html"
+    },
+    "react": {
+      "source": "index-react.html"
+    }
+  },
   "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
     "test": "jest"
   },
   "author": "Marcy Sutton Todd",
@@ -26,5 +35,9 @@
     "react-dom": "^18.2.0",
     "regenerator-runtime": "^0.13.11",
     "serve": "^14.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
   }
 }
